@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2> Список фильмов</h2>
+<ul>
+    {% for movie in movies %}
+    <li>
+        <strong> {{ movie.title }}</strong>
+        ({{ movie.genre}}) - {{ movie.rating }}
+
+        <p> {{ movie.review }} </p>
+    </li>
+
+    {% endfor %}
+
+</ul>
+
+
+{% endblock %}
